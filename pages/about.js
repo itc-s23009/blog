@@ -1,6 +1,6 @@
 import Hero from 'components/hero'
 
-const blog = () => {
+const About = () => {
   return <Hero />
 }
-export default blog
+export default About
