@@ -1,12 +1,8 @@
-// c/two-column.js
-
 import styles from 'styles/two-column.module.css'
 
 export const TwoColumn = ({ children }) => {
   return <div className={styles.flexContainer}>{children}</div>
 }
-
-export default TwoColumn
 
 export const TwoColumnMain = ({ children }) => {
   return <div className={styles.main}>{children}</div>
