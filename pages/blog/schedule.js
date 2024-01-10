@@ -1,14 +1,16 @@
 import { getPostBySlug } from 'lib/api'
 import Container from 'components/container'
+import PostHeader from 'components/post-header'
 
 const Schedule = ({ title, publish, content, eyecatch, categories }) => {
   return (
     <Container>
-      <h1>{title}</h1>
+      <article>
+        <PostHeader title={title} subtitle='Blog Article' publish={publish} />
+      </article>
     </Container>
   )
 }
-
 export default Schedule
 
 export async function getStaticProps () {
@@ -19,7 +21,7 @@ export async function getStaticProps () {
     props: {
       title: post.title,
       publish: post.publishDate,
-      content: post.content, // 修正: constent から content に修正
+      content: post.content,
       eyecatch: post.eyecatch,
       categories: post.categories
     }
