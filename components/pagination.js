@@ -12,21 +12,25 @@ const Pagination = ({
   nextUrl = ''
 }) => {
   return (
-    <ul className={styles.flexContainer}>
+    <ul className={styles.prev}>
       {prevText && prevUrl && (
         <li className={styles.prev}>
           <Link href={prevUrl}>
-            <span>className={styles.iconText}</span>
-            <FontAwesomeIcon icon={faChevronLeft} color='var(--gray-25)' />
-            <span>{prevText}</span>
+            <span className={styles.iconText}>
+              <FontAwesomeIcon icon={faChevronLeft} color='var(--gray-25)' />
+              <span>{prevText}</span>
+            </span>
           </Link>
         </li>
       )}
       {nextText && nextUrl && (
         <li className={styles.next}>
-          <span> className={styles.iconText}</span>
-          <span>{nextText}</span>
-          <FontAwesomeIcon icon={faChevronRight} color='var(--gray-25)' />
+          <Link href={nextUrl}>
+            <span className={styles.iconText}>
+              <span>{nextText}</span>
+              <FontAwesomeIcon icon={faChevronRight} color='var(--gray-25)' />
+            </span>
+          </Link>
         </li>
       )}
     </ul>
