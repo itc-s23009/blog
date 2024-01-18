@@ -1,10 +1,13 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
+module.nextConfig = {
   images: {
-    domains: ['images.microcms-assets.io']
+    remortePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.microcms-assets.io',
+        port: '',
+        pathname: '/assets/*/*/*'
+      }
+    ]
   }
 }
-
-module.exports = nextConfig;
-
