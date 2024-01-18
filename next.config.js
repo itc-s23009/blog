@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
-module.nextConfig = {
+const nextConfig = {
   images: {
-    remortePatterns: [
+    domains: ['images.microcms-assets.io'],
+    remotePatterns: [
       {
         protocol: 'https',
         hostname: 'images.microcms-assets.io',
@@ -11,3 +12,4 @@ module.nextConfig = {
     ]
   }
 }
+module.exports = nextConfig
