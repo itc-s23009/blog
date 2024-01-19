@@ -12,7 +12,7 @@ const Pagination = ({
   nextUrl = ''
 }) => {
   return (
-    <ul className={styles.prev}>
+    <ul className={styles.flexContainer}>
       {prevText && prevUrl && (
         <li className={styles.prev}>
           <Link href={prevUrl}>
